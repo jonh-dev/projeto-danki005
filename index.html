@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,18 +20,20 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu -->
             </nav><!-- Menu Desktop -->
             <nav class="menu-mobile">
-                    <img src="imagens/logo.jpg" alt="Logo">
+                <img src="imagens/logo.jpg" alt="Logo">
+                <div class="menu-wraper">
                     <img  class="hamburg" src="imagens/menu-mobile.png" alt="Menu">
-                <ul class="submenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="venda.html">Venda</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul><!-- Sub Menu -->
+                    <ul class="submenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="venda.html">Venda</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a goto="contato" href="#">Contato</a></li>
+                    </ul><!-- Sub Menu -->
+                </div><!-- Menu Wraper -->
             </nav><!-- Menu Mobile -->
         </div><!-- Center -->
         
@@ -95,7 +97,7 @@
                             <li>Consultoria de Veiculos</li>
                             <li>Indicação de mecânicos e peças</li>
                         </ul>
-                        <div class="btn"><a href="#">Saiba Mais</a></div><!-- BTN -->
+                        <div class="btn"><a href="sobre.html">Saiba Mais</a></div><!-- BTN -->
                     </div><!-- Info Desc -->
                 </div><!-- Wraper -->
             </div><!-- Box Serviços -->
@@ -103,18 +105,25 @@
             <div class="box-servicos2">
                 <div class="wraper2">
                     <div class="depoimento-container">
-                        <h2>Depoimentos</h2>
-                        <p>"O Thiago foi muito atencioso, me buscou no aeroporto e garantiu toda comodidade e conforto no almoço, no transfer, na visita ao veículo e durante o test-drive”</p>
-                        <span>João da Silva</span>
+                        <div class="depoimento-single">
+                            <h2>Depoimentos</h2>
+                            <p>"O Thiago foi muito atencioso, me buscou no aeroporto e garantiu toda comodidade e conforto no almoço, no transfer, na visita ao veículo e durante o test-drive”</p>
+                            <span>João da Silva</span>
+                        </div><!-- Depoimento Single -->
+                        <div class="depoimento-single">
+                            <h2>Depoimentos</h2>
+                            <p>"Serviço de qualidade e atenção total as necessidades do cliente, super recomento!”</p>
+                            <span>Rafael Silveira</span>
+                        </div><!-- Depoimento Single -->
                         <div class="seta">
-                            <img src="imagens/arrow-left.png" alt="Seta Esquerda">
-                            <img src="imagens/arrow-right.png" alt="Seta Direita">
+                            <img next src="imagens/arrow-left.png" alt="Seta Esquerda">
+                            <img prev src="imagens/arrow-right.png" alt="Seta Direita">
                         </div>
                     </div><!-- Depoimento Container -->
                 </div><!-- Wraper 2 -->
             </div><!-- Box Serviços 2 -->
         </section><!-- Serviços Descrição -->
-        <section class="contato">
+        <section id="contato" class="contato">
             <div class="line-titulo">
                 <div class="line1"></div>
                 <h2>Contato</h2>
@@ -141,14 +150,17 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu Footer -->
             </nav><!-- Menu Footer -->
             <div class="copyright">
-                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="tel:+5541995096991">41-99509-6991</a></p>
+                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="mailto:jonh.dev@gmail.com?subject=Assunto&body=Escreva aqui se tiver uma pergunta.">jonh.dev@gmail.com</a></p>
+                <a href="https://cursos.dankicode.com/home" target="_blank"><img src="imagens/logo1.png" alt="Danki Code"></a>
                 <p>Todos os direitos reservados. ©️</p>
             </div>
         </div>
     </footer>
+    <script src="Libs/JQuery.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>

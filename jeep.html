@@ -7,6 +7,7 @@
     <meta name="description" content="Projeto Danki 004">
     <meta name="keywords" content="Projeto, Aula, Danki Code, Jonh Dev, Programação">
     <meta name="author" content="Jonh Dev">
+    <link rel="stylesheet" href="estilo/jquery.fancybox.css">
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="shortcut icon" href="imagens/rm-png.ico" type="image/x-icon">
     <title>Projeto Danki 005</title>
@@ -20,7 +21,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu -->
             </nav><!-- Menu Desktop -->
             <nav class="menu-mobile">
@@ -30,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu -->
             </nav><!-- Menu Mobile -->
         </div><!-- Center -->
@@ -51,7 +52,11 @@
                         <a href="venda.html">VENDA</a><span>></span>
                         <a href="jeep.html">WYLLIS JEEP</a>
                     </div>
-                    <div class="foto-destaque" style="background-image: url('imagens/jeep1.jpg');"></div>
+                    <a data-fancybox="gallery" href="imagens/jeep 3.jpg">
+                        <a data-fancybox="gallery" href="imagens/jeep 2.jpg">
+                        <a data-fancybox="gallery" href="imagens/jeep1.jpg">
+                        <div class="foto-destaque" style="background-image: url('imagens/jeep1.jpg');"></div>
+                    </a>
                     <div class="nav-galeria-parent">
                         <div class="arrow-left-nav"></div>
                         <div class="arrow-right-nav"></div>
@@ -71,7 +76,7 @@
                     <br><br>
                     Steve McQueen adquiriu esse Jeep Willys MB de 1945 diretamente do exército dos Estados Unidos, o que o tornou no segundo proprietário do veículo. O utilitário permaneceu na coleção privada do ator até que fosse vendido em um ‘Leilão de Bens de Steve McQueen’ em novembro de 1984, em Las Vegas, Nevada. O melhor lance pagou 5.9 mil dólares na época e depois foi vendido ao seu proprietário atual por um valor que não foi revelado.
                     </p>
-                    <a class="btn1" href="#">Entre em contato</a>
+                    <a class="btn1" goto="contato" href="#">Entre em contato</a>
                 </div><!-- Descrição Veiculo -->
             </div><!-- Center -->
 
@@ -141,14 +146,18 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu Footer -->
             </nav><!-- Menu Footer -->
             <div class="copyright">
-                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="tel:+5541995096991">41-99509-6991</a></p>
+                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="mailto:jonh.dev@gmail.com?subject=Assunto&body=Escreva aqui se tiver uma pergunta.">jonh.dev@gmail.com</a></p>
+                <a href="https://cursos.dankicode.com/home" target="_blank"><img src="imagens/logo1.png" alt="Danki Code"></a>
                 <p>Todos os direitos reservados. ©️</p>
             </div>
         </div>
     </footer>
+    <script src="Libs/JQuery.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>

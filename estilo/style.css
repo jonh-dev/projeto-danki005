@@ -54,8 +54,9 @@ nav.menu-mobile{
 
 nav.menu-mobile .hamburg{
     margin-right: 5px;
-    width: 28px;
+    width: 31px;
     height: 28px;
+    cursor: pointer;
 }
 
 nav.menu-mobile .submenu{
@@ -75,6 +76,8 @@ nav.menu-mobile ul li{
 }
 
 nav.menu-mobile a{
+    text-transform: uppercase;
+    font-weight: bold;
     font-size: 20px;
     color: white;
 }
@@ -461,8 +464,10 @@ section.contato .form .btn input:hover{
 
 footer{
     width: 100%;
-    padding: 50px 0;
+    height: 170px;
     background-color: #242424;
+    display: flex;
+    align-items: center;
 }
 
 footer .center{
@@ -496,10 +501,12 @@ nav.menu-footer .submenu-footer a:hover{
 }
 
 footer .copyright{
-    padding-right: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    padding: 0 3%;
+    height: 170px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 footer p:last-child{
@@ -546,7 +553,7 @@ section.venda .center{
 }
 
 section.venda .content-venda{
-    margin-top: 40px;
+    margin-top: 71px;
 }
 
 section.venda .side-bar{
@@ -567,16 +574,19 @@ section.venda .barra-preco{
     position: relative;
     width: 90%;
     height: 20px;
-    border: 1px solid #ccc;
     margin-top: 8px;
-    border-radius: 20px;
+}
+
+section.venda .barra-preco input[type=range]{
+    width: 108%;
+    max-width: 362px;
 }
 
 section.venda .barra-preco .barra-preco-fill{
     position: absolute;
     left: 0;
     top: 0;
-    width: 30%;
+    width: 0;
     height: 18px;
     background: linear-gradient(to bottom, white, rgb(189, 188, 188));
     border-radius: 20px;
@@ -585,7 +595,7 @@ section.venda .barra-preco .barra-preco-fill{
 section.venda .pointer-barra{
     position: absolute;
     top: -1px;
-    left: calc(30% - 13px);
+    left: 0px;
     width: 20px;
     height: 20px;
     border-radius: 8px;
@@ -609,6 +619,53 @@ section.venda .search2 h2{
     font-size: 24px;
     color: black;
     font-weight: normal;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    width: 70%;
+    height: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #feae98;
+    outline: 20px;
+    opacity: 0.7;
+    -webkit-transition: .20s;
+    transition: opacity .20s;
+  }
+ 
+input[type=range] {
+    opacity: 1;
+  }
+  
+  
+input[type=range]::-moz-range-track {
+          background-color: green;
+          
+      }
+  
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #50504f;
+    cursor: pointer;
+  }
+  
+ input
+[type=range]:-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+  }
+
+input[type=checkbox]{
+    margin-right: 5px;
+    margin-top: 20px;
 }
 
 section.venda .form-venda-wraper{
@@ -635,7 +692,7 @@ section.venda .vitrine-venda{
 }
 
 section.venda .espaco{
-    margin-top: 30px;
+   margin-bottom: 30px;
 }
 
 /*****/
@@ -675,6 +732,10 @@ section.venda-single .info-bread a{
 section.venda-single .info-bread span{
     font-size: 30px;
     padding: 0 30px;
+}
+
+section.venda-single .info-bread a:last-child{
+    color: #Eb2d2d;
 }
 
 section.venda-single .descricao-veiculo{
@@ -772,7 +833,6 @@ section.venda-single .nav-galeria-wraper{
     justify-content: space-around;
 }
 
-
 section.venda-single .mini-img{
     border: 1px solid rgb(0, 0, 0);
     background-position: center;
@@ -822,7 +882,7 @@ section.sobre .titulo h2{
     color: white;
     font-size: 28px;
     padding-top: 13px;
-    padding-left: 21px;
+    padding-left: 27px;
     text-transform: uppercase;
 }
 
@@ -987,7 +1047,6 @@ section.sobre .info-autor p{
 
     footer .copyright{
         align-items: center;
-        padding-right: 10px;
     }
 
     section.venda .center {
@@ -1018,10 +1077,6 @@ section.sobre .info-autor p{
     section.venda .valor-pesquisa {
         width: 100%;
         justify-content: space-around;
-    }
-
-    section.venda .search2 form {
-        margin-top: 20px;
     }
 
     section.venda .vitrine-venda{

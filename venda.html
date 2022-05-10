@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <meta name="description" content="Projeto Danki 004">
     <meta name="keywords" content="Projeto, Aula, Danki Code, Jonh Dev, Programação">
     <meta name="author" content="Jonh Dev">
+    <link rel="stylesheet" href="estilo/jquery.fancybox.css">
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="shortcut icon" href="imagens/rm-png.ico" type="image/x-icon">
     <title>Projeto Danki 005</title>
@@ -20,7 +21,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu -->
             </nav><!-- Menu Desktop -->
             <nav class="menu-mobile">
@@ -30,7 +31,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu -->
             </nav><!-- Menu Mobile -->
         </div><!-- Center -->
@@ -47,43 +48,26 @@
                     <div class="search1">
                         <h2>Filtre por preço</h2>
                         <div class="barra-preco">
-                            <div class="barra-preco-fill"></div>
-                            <div class="pointer-barra"></div>
+                            <input type="range" list="el" name="range" min="0" max="100" value="0" id="filter">
                         </div><!-- Barra Preço -->
                         <div class="valor-pesquisa">
-                            <p>R$:0.00</p>
-                            <p>R$:70.000.00</p>
+                            <p class="preco-pesquisa" id="outputRange">R$:0,00</p>
+                            <p>R$:70.000,00</p>
                         </div><!-- Valor Pesquisa -->
                     </div><!-- Search 1 -->
                     <div class="search2">
                         <h2>Filtre por ano</h2>
-                        <form action="">
-                            <div class="form-venda-wraper">
-                                <input type="checkbox" id="item1">
-                                <label for="item1"> </label><!-- Item 1 -->
-                                <span>Todas as décadas</span>
-                            </div><!-- Form Venda Wraper -->
-                            <div class="form-venda-wraper">
-                                <input type="checkbox" id="item2">
-                                <label for="item2"></label><!-- Item 2 -->
-                                <span>1950 - 1960</span>
-                            </div><!-- Form Venda Wraper -->
-                            <div class="form-venda-wraper">
-                                <input type="checkbox" id="item3">
-                                <label for="item3"></label><!-- Item 3 -->
-                                <span>1961 - 1970</span>
-                            </div><!-- Form Venda Wraper -->
-                            <div class="form-venda-wraper">
-                                <input type="checkbox" id="item4">
-                                <label for="item4"></label><!-- Item 4 -->
-                                <span>1971 - 1980</span>
-                            </div><!-- Form Venda Wraper -->
-                        </form>
+                        <ul class="checkbox">
+                            <input type="checkbox"  id="all" name="all"> TODAS AS DÉCADAS <br>
+                            <input type="checkbox" class="ano"> 1950 - 1960 <br>
+                            <input type="checkbox" class="ano2"> 1961 - 1970 <br>
+                            <input type="checkbox" class="ano3"> 1971 - 1980 <br>
+                        </ul><!-- Checkbox -->
                     </div><!-- Search2 -->
                 </div><!-- Side Bar -->
                 <div class="vitrine-venda">
 
-                    <div class="vitrine-destaque">
+                    <div class="vitrine-destaque espaco" id="car1">
                         <div class="carro-img" style="background-image: url('imagens/Karmann\ 3.jpg');"></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Volkswagen Karmann-ghia</h3>
@@ -92,7 +76,7 @@
                         </div><!-- Info Carro -->
                     </div><!-- Vitrine Destaque -->
 
-                    <div class="vitrine-destaque">
+                    <div class="vitrine-destaque espaco" id="car2">
                         <div class="carro-img" style="background-image: url('imagens/belair1.jpg');" ></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Chevrolet Bel Air</h3>
@@ -101,7 +85,7 @@
                         </div><!-- Info Carro -->
                     </div><!-- Vitrine Destaque -->
 
-                    <div class="vitrine-destaque">
+                    <div class="vitrine-destaque espaco" id="car3">
                         <div class="carro-img" style="background-image: url('imagens/F75-1.jpg');" ></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Ford F-75</h3>
@@ -112,7 +96,7 @@
 
                 
 
-                    <div class="vitrine-destaque espaco">
+                    <div class="vitrine-destaque " id="car4">
                         <div class="carro-img" style="background-image: url('imagens/variant1.jpeg');" ></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Volkswagen Variant</h3>
@@ -121,7 +105,7 @@
                         </div><!-- Info Carro -->
                     </div><!-- Vitrine Destaque -->
 
-                    <div class="vitrine-destaque espaco">
+                    <div class="vitrine-destaque " id="car5">
                         <div class="carro-img" style="background-image: url('imagens/jeep1.jpg');" ></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Willys Jeep</h3>
@@ -130,7 +114,7 @@
                         </div><!-- Info Carro -->
                     </div><!-- Vitrine Destaque -->
 
-                    <div class="vitrine-destaque espaco">
+                    <div class="vitrine-destaque " id="car6">
                         <div class="carro-img" style="background-image: url('imagens/maverick3.jpg');" ></div><!-- Carro IMG -->
                         <div class="info-carro">
                             <h3>Ford Maverick GT</h3>
@@ -151,14 +135,19 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="venda.html">Venda</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a goto="contato" href="#">Contato</a></li>
                 </ul><!-- Sub Menu Footer -->
             </nav><!-- Menu Footer -->
             <div class="copyright">
-                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="tel:+5541995096991">41-99509-6991</a></p>
+                <p><strong><a href="https://github.com/jonh-dev" target="_blank">Jonh Dev</a></strong> / <a href="mailto:jonh.dev@gmail.com?subject=Assunto&body=Escreva aqui se tiver uma pergunta.">jonh.dev@gmail.com</a></p>
+                <a href="https://cursos.dankicode.com/home" target="_blank"><img src="imagens/logo1.png" alt="Danki Code"></a>
                 <p>Todos os direitos reservados. ©️</p>
             </div>
         </div>
     </footer>
+    <script src="Libs/JQuery.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/filtro.js"></script>
 </body>
 </html>
